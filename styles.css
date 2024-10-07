@@ -1,0 +1,218 @@
+/* styles.css */
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Dark mode switch styles */
+.switch {
+    font-size: 17px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    --background: #28096b;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background);
+    transition: .5s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 50%;
+    left: 10%;
+    bottom: 15%;
+    box-shadow: inset 8px -4px 0px 0px #fff000;
+    background: var(--background);
+    transition: .5s;
+}
+
+input:checked + .slider {
+    background-color: #522ba7;
+}
+
+input:checked + .slider:before {
+    transform: translateX(100%);
+    box-shadow: inset 15px -4px 0px 15px #fff000;
+}
+
+/* Main content styles */
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+section p {
+    line-height: 1.6;
+}
+
+/* Specific section styles */
+#about {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+#skills {
+    background-color: #e2e2e2;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+#projects {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+#resume {
+    background-color: #e2e2e2;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+#contact {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.contact-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.contact-icons li {
+    display: inline;
+}
+
+.contact-icons a {
+    color: #333;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.contact-icons a:hover {
+    color: #0073e6;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+header.dark-mode {
+    background-color: #1e1e1e;
+}
+
+#about.dark-mode,
+#projects.dark-mode,
+#contact.dark-mode {
+    background-color: #1e1e1e;
+}
+
+#skills.dark-mode,
+#resume.dark-mode {
+    background-color: #2e2e2e;
+}
+
+.contact-icons a.dark-mode {
+    color: #ffffff;
+}
+
+.contact-icons a.dark-mode:hover {
+    color: #0073e6;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+
+    section {
+        margin-bottom: 1rem;
+    }
+
+    .contact-icons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-icons li {
+        margin-bottom: 0.5rem;
+    }
+
+    .contact-icons a {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .switch {
+        width: 3em;
+        height: 1.5em;
+    }
+
+    .slider:before {
+        height: 1em;
+        width: 1em;
+    }
+
+    .contact-icons a {
+        font-size: 1.5rem;
+    }
+}
