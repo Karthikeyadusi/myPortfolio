@@ -13,12 +13,44 @@ header {
     background-color: #333;
     color: white;
     padding: 1rem 0;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
 }
 
 header h1 {
     margin: 0;
+    padding-left: 1rem;
+}
+
+nav {
+    margin-right: auto;
+    padding-left: 2rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #0073e6;
 }
 
 /* Dark mode switch styles */
@@ -126,24 +158,42 @@ section p {
 .contact-icons {
     list-style: none;
     padding: 0;
-    display: flex;
-    gap: 1rem;
 }
 
 .contact-icons li {
-    display: inline;
+    margin-bottom: 1rem;
 }
 
 .contact-icons a {
     color: #333;
     font-size: 1.5rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
     transition: color 0.3s;
+}
+
+.contact-icons a i {
+    margin-right: 0.5rem;
 }
 
 .contact-icons a:hover {
     color: #0073e6;
 }
+/* Button styles */
+.btn-download {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #0073e6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
 
+.btn-download:hover {
+    background-color: #005bb5;
+}
 /* Dark mode styles */
 body.dark-mode {
     background-color: #121212;
@@ -194,6 +244,15 @@ header.dark-mode {
 
     .contact-icons a {
         font-size: 2rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin-bottom: 0.5rem;
     }
 }
 
