@@ -13,3 +13,28 @@ document.getElementById('darkModeToggle').addEventListener('change', function() 
         icon.classList.toggle('dark-mode');
     });
 });
+
+document.getElementById('downloadResumeBtn').addEventListener('click', function(event) {
+    event.preventDefault();
+    const resumeLink = this.href;
+    const resumeName = 'Karthikeya_Dusi_Resume.pdf';
+
+    if (localStorage.getItem('resumeDownloaded')) {
+        const userConfirmed = confirm('The resume already exists. Do you want to download it again?');
+        if (userConfirmed) {
+            downloadFile(resumeLink, resumeName);
+        }
+    } else {
+        downloadFile(resumeLink, resumeName);
+        localStorage.setItem('resumeDownloaded', 'true');
+    }
+});
+
+function downloadFile(url, filename) {
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
