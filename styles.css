@@ -5,37 +5,39 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    transition: background-color 0.5s, color 0.5s;
+    background-color: #E7E8D1 ;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 header {
-    background-color: #333;
+    background-color:  #C85C29;
     color: white;
-    padding: 1rem 0;
+    padding:  16px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
 }
-
-header h1 {
+#title {
     margin: 0;
-    padding-left: 1rem;
+    text-align: center;
+    padding-left: 16px;
+    font-family: "Raleway ";
 }
 
+
 nav {
-    margin-right: auto;
-    padding-left: 2rem;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 1rem;
+    gap: 5rem;
     margin: 0;
     padding: 0;
-    
 }
 
 .nav-links li {
@@ -43,15 +45,161 @@ nav {
 }
 
 .nav-links a {
-    color: white;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #E7E8D1;
+    color: #333333;
     text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 400;
 }
 
 .nav-links a:hover {
     color: #0073e6;
+   
 }
+
+
+/* Main content styles */
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+section p {
+    line-height: 1.6;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#projecthead {
+ 
+    padding-bottom: 0.5rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* Specific section styles */
+#about {
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 5px;
+}
+
+#skills {
+    background-color: #F5FFFA;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+#projects {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+#resume {
+    background-color: #F5FFFA;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+#contact {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.contact-icons {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-icons li {
+    margin-bottom: 16px;
+}
+
+.contact-icons a {
+    color: #333;
+    font-size: 24px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.contact-icons a i {
+    margin-right: 0.5rem;
+}
+
+.contact-icons a:hover {
+    color: #0073e6;
+}
+
+
+
+/* Button styles */
+.btn-download {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #0073e6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-download:hover {
+    background-color: #005bb5;
+}
+#downloadProjectBtn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #0073e6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#downloadProjectBtn:hover {
+    background-color: #005bb5;
+}
+
+/* Visitor Name Animation */
+@keyframes moveAcross {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+#visitorName {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: #4B3C3D;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: "verdana";
+    line-height: 1.5;
+    font-size: 16px;
+    position: relative;
+    animation: moveAcross 7s linear infinite;
+ 
+    }
+
+
+
 
 /* Dark mode switch styles */
 .switch {
@@ -105,95 +253,7 @@ input:checked + .slider:before {
     box-shadow: inset 15px -4px 0px 15px #fff000;
 }
 
-/* Main content styles */
-main {
-    padding: 2rem;
-}
 
-section {
-    margin-bottom: 2rem;
-}
-
-section h2 {
-    border-bottom: 2px solid #333;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-section p {
-    line-height: 1.6;
-}
-
-/* Specific section styles */
-#about {
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 5px;
-}
-
-#skills {
-    background-color: #e2e2e2;
-    padding: 1rem;
-    border-radius: 5px;
-}
-
-#projects {
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 5px;
-}
-
-#resume {
-    background-color: #e2e2e2;
-    padding: 1rem;
-    border-radius: 5px;
-}
-
-#contact {
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 5px;
-}
-
-.contact-icons {
-    list-style: none;
-    padding: 0;
-}
-
-.contact-icons li {
-    margin-bottom: 1rem;
-}
-
-.contact-icons a {
-    color: #333;
-    font-size: 1.5rem;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    transition: color 0.3s;
-}
-
-.contact-icons a i {
-    margin-right: 0.5rem;
-}
-
-.contact-icons a:hover {
-    color: #0073e6;
-}
-/* Button styles */
-.btn-download {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: #0073e6;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.btn-download:hover {
-    background-color: #005bb5;
-}
 /* Dark mode styles */
 body.dark-mode {
     background-color: #121212;
@@ -223,26 +283,27 @@ header.dark-mode {
     color: #0073e6;
 }
 
-/* Responsive styles */
+#visitorName.dark-mode {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: beige;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: "verdana";
+    line-height: 1.5;
+    font-size: 16px;
+    position: relative;
+    animation: moveAcross 7s linear infinite;
+ 
+}
+
 @media (max-width: 768px) {
-    main {
-        padding: 1rem;
-    }
-
-    section {
-        margin-bottom: 1rem;
-    }
-
-    .contact-icons {
+    header {
         flex-direction: column;
         align-items: center;
     }
 
-    .contact-icons li {
-        margin-bottom: 0.5rem;
-    }
-
-    .contact-icons a {
+    header h1 {
         font-size: 2rem;
     }
 
@@ -254,6 +315,11 @@ header.dark-mode {
     .nav-links li {
         margin-bottom: 0.5rem;
     }
+
+    .switch {
+        top: 20px;
+        right: 20px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -264,14 +330,5 @@ header.dark-mode {
     .switch {
         width: 3em;
         height: 1.5em;
-    }
-
-    .slider:before {
-        height: 1em;
-        width: 1em;
-    }
-
-    .contact-icons a {
-        font-size: 1.5rem;
     }
 }
