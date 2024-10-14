@@ -308,24 +308,39 @@ header.dark-mode {
     header {
         flex-direction: column;
         align-items: center;
+        padding: 1rem;
     }
 
     header h1 {
         font-size: 2rem;
+        margin-bottom: 1rem;
     }
 
     .nav-links {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.5rem; /* Decrease the gap between navigation buttons */
     }
 
     .nav-links li {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0;
+    }
+
+    .nav-links a {
+        background-color: #E7E8D1;
+        color: #333333;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+        color: #0073e6; /* Hover effect for navigation buttons */
     }
 
     .switch {
-        top: 20px;
-        right: 20px;
+        top: 10px;
+        right: 10px;
     }
 }
 
@@ -337,5 +352,9 @@ header.dark-mode {
     .switch {
         width: 3em;
         height: 1.5em;
+    }
+
+    .nav-links {
+        gap: 0.3rem; /* Further decrease the gap for very small screens */
     }
 }
